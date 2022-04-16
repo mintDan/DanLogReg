@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<!--    android:fillViewport="true"> &lt;!&ndash;IMPORTANT otherwise backgrnd img. will not fill the whole screen &ndash;&gt;-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graphmnd"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="0dp" />
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/LogResNums"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/graphmnd">
+                <!--android:stretchColumns="0"-->
+
+
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+                <TableRow>
+                    <TextView
+                        android:id="@+id/TableHeader"
+                        android:text="Logistic Regression"
+                        android:padding="3dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/t11"
+                        android:text="b0"
+                        android:gravity="left"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="b1"
+                        android:id="@+id/t12"
+                        android:gravity="center"
+                        android:padding="3dip" />
+                </TableRow>
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+                <TableRow>
+                    <TextView
+                        android:id="@+id/t21"
+                        android:text="b0"
+                        android:gravity="left"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="b1"
+                        android:id="@+id/t22"
+                        android:gravity="center"
+                        android:padding="3dip" />
+                </TableRow>
+                <View
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+                <TableRow>
+                    <TextView
+                        android:id="@+id/t31"
+                        android:text="b31"
+                        android:gravity="left"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="b32"
+                        android:id="@+id/t32"
+                        android:gravity="center"
+                        android:padding="3dip" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <!--<EditText
+                android:id="@+id/y"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/LogResNums"
+                android:hint="datax"
+                >
+            </EditText>-->
+
+
+            <Button
+                android:id="@+id/btnClearGraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear Graph"
+                android:layout_below="@id/LogResNums"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/btnLogReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Run LogReg"
+                android:layout_below="@id/btnClearGraph"
+                >
+            </Button>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
